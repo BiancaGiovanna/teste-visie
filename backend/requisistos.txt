@@ -1,0 +1,7 @@
+id_pessoa
+nome
+rg
+cpf
+data_nascimento 
+data_admissao
+funcao
