@@ -7,8 +7,7 @@ mydb = mysql.connector.connect(
 )
 app = Flask(__name__)
 app.json.sort_keys = False
-cors = CORS(app)
-app.config["CORS_HEADERS"] = "Content-Type"
+CORS(app)
 
 
 @app.route("/pessoas", methods=["GET"])
@@ -32,7 +31,7 @@ def get_pessoas():
             }
         )
 
-    return make_response(jsonify(message="Lista de pessoas", data=pessoas))
+    return make_response(jsonify(pessoas))
 
 
 @app.route("/pessoa/<int:id_pessoa>", methods=["GET"])
@@ -55,7 +54,7 @@ def get_pessoa_by_id(id_pessoa):
         "funcao": pessoa[6],
     }
 
-    return make_response(jsonify(message="Pessoa encontrada", data=pessoa_dict))
+    return make_response(jsonify(pessoa_dict))
 
 
 @app.route("/pessoas", methods=["POST"])
@@ -123,4 +122,4 @@ def delete_pessoa(id_pessoa):
     return make_response(jsonify(message="Pessoa excluída com sucesso"))
 
 
-app.run()
+app.run(host="192.168.0.110")
