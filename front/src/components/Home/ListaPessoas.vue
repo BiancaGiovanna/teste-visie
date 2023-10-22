@@ -46,7 +46,7 @@
                   <router-link :to="{ name: 'editar', params: { id: pessoa.id } }">
                     <i class="bi bi-pencil icon icon-edit"></i>
                   </router-link>
-                  <i @click="excluirPessoa(pessoaSelecionada.id)" class="bi bi-trash icon icon-delete"></i>
+                  <i @click="excluirPessoa(pessoa.id)" class="bi bi-trash icon icon-delete"></i>
                 </div>
               </td>
               <td><button class="show-button" @click="selecionarPessoa(pessoa)">VER MAIS</button></td>

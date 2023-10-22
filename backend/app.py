@@ -3,7 +3,10 @@ from flask import Flask, make_response, jsonify, request
 from flask_cors import CORS
 
 mydb = mysql.connector.connect(
-    host="localhost", user="root", password="dev123", database="python_teste"
+    host="jobs.visie.com.br",
+    user="biancagiovanna",
+    password="YmlhbmNhZ2lv",
+    database="biancagiovanna",
 )
 app = Flask(__name__)
 app.json.sort_keys = False
@@ -122,4 +125,6 @@ def delete_pessoa(id_pessoa):
     return make_response(jsonify(message="Pessoa excluída com sucesso"))
 
 
-app.run(host="192.168.0.110")
+app.run(
+    host="192.168.0.110"
+)  # o host é o IPV4 da maquina por conta do emulador do android

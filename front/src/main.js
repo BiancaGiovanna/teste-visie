@@ -1,9 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
-import ListaPessoas from "./pages/Home/ListaPessoas.vue";
-import AdicionarPessoas from "./pages/Adcionar/AdicionarPessoa.vue";
-import EditarPessoa from "./pages/Editar/EditarPessoa.vue";
+import ListaPessoas from "./components/Home/ListaPessoas.vue";
+import AdicionarPessoas from "./components/Adcionar/AdicionarPessoa.vue";
+import EditarPessoa from "./components/Editar/EditarPessoa.vue";
 import axios from "axios";
 import urlAPI from "./utils/urlAPI";
 
